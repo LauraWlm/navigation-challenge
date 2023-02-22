@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./assets/style/index.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <title>Navigation with dropdown challenge</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="assets/images/logo.svg" alt="Logo snap" />
+      <nav id="wrap" class="nav">
+        <img
+          class="nav--burger"
+          src="assets/images/icon-menu.svg"
+          alt="icon navigation"
+        />
+        <li>
+          <ul>
+            <li><a href="#">Todo List</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Reminders</a></li>
+            <li><a href="#">Planning</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="nav__link"> Company</a>
+          <ul>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="nav__link">Careers</a>
+        </li>
+        <li>
+          <a href="#" class="nav__link">Features</a>
+        </li>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <a href="#" class="nav__link">About</a>
 
-  Features
-  Company
-  Careers
-  About
+        <button class="nav__btn--login">Login</button>
+        <button class="nav__btn--register">Register</button>
+      </nav>
+    </header>
 
-  Login
-  Register
+    Make remote work Get your team in sync, no matter your location. Streamline
+    processes, create team rituals, and watch productivity soar. Learn more
 
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
