@@ -12,16 +12,13 @@
   <body>
     <header class="header">
       <img class="header__logo" src="assets/images/logo.svg" alt="Logo snap" />
-
-      <nav class="header__nav">
-        <img
-          class="header__nav__burger"
-          src="assets/images/icon-menu.svg"
-          alt="icon navigation"
-        />
-        <div class="header__nav__open">
-          <ul>
-            <li class="header__nav__menuDer">
+      <div class="header__burger"></div>
+      <nav class="header__nav" id="menu-container">
+        
+        
+        <div class="header__nav__open" id="menu">
+          <ul class="header__nav__classes">
+            <li class="header__nav__menuDer" id="features">
               <a href="#">Features</a>
               <ul class="header__nav__sousmenu">
                 <li><a href="#">Todo List</a></li>
@@ -30,7 +27,7 @@
                 <li><a href="#">Planning</a></li>
               </ul>
             </li>
-            <li class="header__nav__menuDer">
+            <li class="header__nav__menuDer" id="Company">
               <a href="#"> Company</a>
               <ul class="header__nav__sousmenu">
                 <li><a href="#">History</a></li>
@@ -38,10 +35,10 @@
                 <li><a href="#">Blog</a></li>
               </ul>
             </li>
-            <li>
+            <li id="careers">
               <a href="#">Careers</a>
             </li>
-            <li>
+            <li id="about">
               <a href="#">About</a>
             </li>
           </ul>
@@ -50,25 +47,31 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <img
         src="./assets/images/image-hero-mobile.png"
         alt="Hero illustration"
       />
-      <h1>Make remote work</h1>
-      <p>
+      <h1 class="main__title">Make remote work</h1>
+      <p class="main__p">
         Get your team in sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
       </p>
-      <button>Learn more</button>
+      <button class="main__btn">Learn more</button>
+      <section class="main__client">
+        <img src="assets/images/client-databiz.svg" alt="databiz logo" />
+        <img src="assets/images/client-audiophile.svg" alt="audiophile logo" />
+        <img src="assets/images/client-meet.svg" alt="meet logo" />
+        <img src="assets/images/client-maker.svg" alt="maker logo" />
+      </section>
     </main>
 
-    <footer>
-      <div class="attribution">
+    <footer class="foo">
+      <div class="foo__attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/LauraWlm">Laura Wilhelmi</a>.
+        >. <br> Coded by <a href="https://github.com/LauraWlm">Laura Wilhelmi</a>.
       </div>
     </footer>
   </body>
