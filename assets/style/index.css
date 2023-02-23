@@ -18,64 +18,58 @@ a {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 1rem;
 }
 .header__logo {
   padding: 1rem 0 0 1rem;
 }
-.header__burger {
-  background-image: url(../images/icon-menu.svg);
-  padding: 2rem 0 0 2.5rem;
-  background-repeat: no-repeat;
-}
-.header__nav {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+.header__nav #burger {
+  width: 1.875rem;
+  height: 0.125rem;
+  background: rgb(0, 0, 0);
+  display: inline-block;
+  position: relative;
+  top: -1.2rem;
+  right: 1rem;
   z-index: 5;
 }
-.header__nav__open {
-  position: fixed;
-  background: hsl(0deg, 0%, 98%);
-  width: 50%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header__nav #burger::before,
+.header__nav #burger::after {
+  content: "";
+  width: 1.875rem;
+  height: 0.125rem;
+  background: rgb(0, 0, 0);
+  display: inline-block;
+  position: absolute;
+  transform-origin: center;
+  transition: all 0.3s ease;
 }
-.header__nav__close {
-  padding: 0.7rem 0 0 8rem;
+.header__nav #burger::before {
+  top: -0.4375rem;
+}
+.header__nav #burger::after {
+  top: 7px;
+}
+.header__nav #burger.open {
+  background: transparent;
+}
+.header__nav #burger.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.header__nav #burger.open::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 .header__nav__allmenu {
-  padding-top: 3rem;
-  font-family: "Epilogue", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: hsl(0deg, 0%, 41%);
-  width: 70%;
-  padding-bottom: 1rem;
+  position: absolute;
+  background: red;
+  width: 10px;
+  top: -2rem;
+  transform: scaleY(0);
+  transition: all 0.3s ease;
 }
-.header__nav__btn {
-  font-family: "Epilogue", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: hsl(0deg, 0%, 41%);
-  background-color: hsl(0deg, 0%, 98%);
-  width: 70%;
-  text-align: center;
-  border-radius: 11px;
-  padding: 0.7rem;
-}
-.header__nav__btn--login {
-  border: none;
-}
-.header__nav__btn:hover {
-  background-color: hsl(277deg, 42%, 51%);
+.header__nav__allmenu.open {
+  transform: scaleY(1);
 }
 
 .main {
