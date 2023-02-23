@@ -1,0 +1,12 @@
+.foo {
+    padding-top: 0.7rem;
+    text-align: center;
+    &__attribution {
+      @include fontEpilogue(0.8rem, 500, $almostBlack);
+      a {
+        text-decoration: none;
+        color: $mediumGray;
+      }
+    }
+  }
+  

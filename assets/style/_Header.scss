@@ -13,79 +13,49 @@
     background-repeat: no-repeat;
   }
   &__nav {
-    visibility: hidden;
+    //visibility: hidden;
     position: fixed;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
     z-index: 5;
     &__open {
       position: fixed;
-      background: white;
-      width: 97%;
-      //height: 90vh;
-      //border-radius: 10px;
-      margin-bottom: 3vh;
-      &__classes{
-        margin-top: 1.875rem;
-        @include fontEpilogue (1rem, 500, $mediumGray);
-      }
-      &__btn{
+      background: $almostWhite;
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__close{
+    padding: 0.7rem 0 0 8rem;
+    }
+    &__allmenu{
+        padding-top: 3rem;
+        @include fontEpilogue(1rem, 500, $mediumGray);
+        width: 70%;
+        padding-bottom: 1rem
+    }
+    &__btn{
+        @include fontEpilogue(0.8rem, 500, $mediumGray);
         background-color: $almostWhite;
-      }
+      width: 70%;
+      text-align: center;
+      border-radius: 11px;
+      padding: 0.7rem;
+      
+    }
+    &__btn--login{
+        border: none;
+    }
+    &__btn:hover{
+        background-color: $lila;
     }
   }
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
-  padding-top: 1rem;
-  img {
-    width: 100%;
-  }
-  &__title {
-    @include fontEpilogue(2rem, 700, black);
-  }
-  &__p {
-    @include fontEpilogue(1rem, 500, $mediumGray);
-    line-height: 1.5rem;
-    padding: 0 0.5rem 0 0.5rem;
-  }
-  &__btn {
-    border: 1px solid;
-    background-color: $almostBlack;
-    border-radius: 12px;
-    width: 27%;
-    padding: 0.7rem 0 0.7rem 0;
-    @include fontEpilogue(0.8rem, 500, $almostWhite);
-  }
-  &__client {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 0.5rem;
-    img {
-      width: 17%;
-    }
-  }
-}
-.foo {
-  padding-top: 0.7rem;
-  text-align: center;
-  &__attribution {
-    @include fontEpilogue(0.8rem, 500, $almostBlack);
-    a {
-      text-decoration: none;
-      color: $mediumGray;
-    }
-  }
-}
+

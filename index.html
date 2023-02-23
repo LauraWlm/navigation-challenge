@@ -6,18 +6,22 @@
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="./assets/style/index.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/" />
-
+    <script defer src="./assets/scripts/index.js"></script>
     <title>Navigation with dropdown challenge</title>
   </head>
   <body>
     <header class="header">
       <img class="header__logo" src="assets/images/logo.svg" alt="Logo snap" />
-      <div class="header__burger"></div>
+      <div class="header__burger" id="open"></div>
       <nav class="header__nav" id="menu-container">
-        
-        
         <div class="header__nav__open" id="menu">
-          <ul class="header__nav__classes">
+          <div class="header__nav__close" id="close">
+            <img
+              src="./assets/images/icon-close-menu.svg"
+              alt="close menu icon"
+            />
+          </div>
+          <ul class="header__nav__allmenu">
             <li class="header__nav__menuDer" id="features">
               <a href="#">Features</a>
               <ul class="header__nav__sousmenu">
@@ -42,8 +46,10 @@
               <a href="#">About</a>
             </li>
           </ul>
-          <button class="header__nav__btn--login">Login</button>
-          <button class="header__nav__btn--register">Register</button>
+          <button class="header__nav__btn header__nav__btn--login" id="login">
+            Login
+          </button>
+          <button class="header__nav__btn" id="register">Register</button>
         </div>
       </nav>
     </header>
@@ -71,7 +77,8 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. <br> Coded by <a href="https://github.com/LauraWlm">Laura Wilhelmi</a>.
+        >. <br />
+        Coded by <a href="https://github.com/LauraWlm">Laura Wilhelmi</a>.
       </div>
     </footer>
   </body>

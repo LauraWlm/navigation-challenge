@@ -29,7 +29,6 @@ a {
   background-repeat: no-repeat;
 }
 .header__nav {
-  visibility: hidden;
   position: fixed;
   background: rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(10px);
@@ -37,25 +36,46 @@ a {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-end;
   z-index: 5;
 }
 .header__nav__open {
   position: fixed;
-  background: white;
-  width: 97%;
-  margin-bottom: 3vh;
+  background: hsl(0deg, 0%, 98%);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.header__nav__open__classes {
-  margin-top: 1.875rem;
+.header__nav__close {
+  padding: 0.7rem 0 0 8rem;
+}
+.header__nav__allmenu {
+  padding-top: 3rem;
   font-family: "Epilogue", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   color: hsl(0deg, 0%, 41%);
+  width: 70%;
+  padding-bottom: 1rem;
 }
-.header__nav__open__btn {
+.header__nav__btn {
+  font-family: "Epilogue", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 41%);
   background-color: hsl(0deg, 0%, 98%);
+  width: 70%;
+  text-align: center;
+  border-radius: 11px;
+  padding: 0.7rem;
+}
+.header__nav__btn--login {
+  border: none;
+}
+.header__nav__btn:hover {
+  background-color: hsl(277deg, 42%, 51%);
 }
 
 .main {
