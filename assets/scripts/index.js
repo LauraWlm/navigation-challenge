@@ -1,11 +1,43 @@
-/* Sélection des éléments HTML */
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger = document.querySelector(".hamburger");
+const closeIcon = document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+const downMenu = document.querySelectorAll(".dropDownMenu");
+const subMenu = document.querySelectorAll(".subMenu");
+const arrowDown = document.querySelector(".arrowDown");
 
-let link = document.getElementById('link')
-let burger = document.getElementById('burger')
-let menu = document.getElementById('menu')
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
 
-link.addEventListener('click', function(e) {
-    e.preventDefault()
-    burger.classList.toggle('open')
-    menu.classList.toggle('open')
-})
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+    function(menuItem) { 
+      menuItem.addEventListener("click", toggleMenu);
+    }
+  )
+
+
+ function toggleNav() {
+  if (menu.classList.contains("dropDownMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);

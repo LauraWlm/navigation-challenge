@@ -10,42 +10,53 @@
     <title>Navigation with dropdown challenge</title>
   </head>
   <body>
-    <header class="header">
-      <img class="header__logo" src="assets/images/logo.svg" alt="Logo snap" />
-     
-      <nav class="header__nav" id="menu-container">
-      <a id="link" href="#"><span id="burger"></span></a>
-        <div class="header__nav__menu" id="menu">
-          <ul class="header__nav__allmenu" >
-            <li class="header__nav__menuDer" id="features">
-              <a href="#">Features</a>
-              <ul class="header__nav__sousmenu">
-                <li><a href="#">Todo List</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Reminders</a></li>
-                <li><a href="#">Planning</a></li>
+    <header>
+      <img class="logo" src="assets/images/logo.svg" alt="Logo snap" />
+
+      <nav class="menu-container">
+        <div class="menu">
+          <ul class="allMenu">
+            <li class="dropDownMenu">
+              <a class="menuItem" href="#">Features <img class="arrowDown" src="assets/images/icon-arrow-down.svg" alt="open sub-menu"></a>
+            
+              <ul class="subMenu">
+                <li><a class="menuItem" href="#">Todo List</a></li>
+                <li><a class="menuItem" href="#">Calendar</a></li>
+                <li><a class="menuItem" href="#">Reminders</a></li>
+                <li><a class="menuItem" href="#">Planning</a></li>
               </ul>
             </li>
-            <li class="header__nav__menuDer" id="Company">
-              <a href="#"> Company</a>
-              <ul class="header__nav__sousmenu">
-                <li><a href="#">History</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Blog</a></li>
+            <li class="dropDownMenu">
+              <a class="menuItem" href="#"> Company <img class="arrowDown" src="assets/images/icon-arrow-down.svg" alt="open sub-menu"></a>
+              <ul class="subMenu">
+                <li><a class="menuItem" href="#">History</a></li>
+                <li><a class="menuItem" href="#">Our Team</a></li>
+                <li><a class="menuItem" href="#">Blog</a></li>
               </ul>
             </li>
-            <li id="careers">
-              <a href="#">Careers</a>
+            <li>
+              <a class="menuItem" href="#">Careers</a>
             </li>
-            <li id="about">
-              <a href="#">About</a>
+            <li>
+              <a class="menuItem" href="#">About</a>
             </li>
+          
+          <button class="login" id="login">Login</button>
+          <button class="register" id="register">Register</button>
           </ul>
-          <button class="header__nav__btn header__nav__btn--login" id="login">
-            Login
+          </div>
+        <button class="hamburger">
+            <img
+              class="menuIcon"
+              src="assets/images/icon-menu.svg"
+              alt="menu icon"
+            />
+            <img
+              class="closeIcon"
+              src="assets/images/icon-close-menu.svg"
+              alt="close menu icon"
+            />
           </button>
-          <button class="header__nav__btn" id="register">Register</button>
-        </div>
       </nav>
     </header>
     <main class="main">
